@@ -41,7 +41,7 @@ Make sure you have Docker and Docker Compose installed on your machine. If not, 
 
    This will start the NestJS API on `http://localhost:3000` and the GraphQL documention on `http://localhost:3000/graphql`. You can access both services in your web browser.
 
-## Running database container 
+## Running database migrations 
 
 In order to run database migrations run:
 
