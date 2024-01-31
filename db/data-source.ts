@@ -26,8 +26,8 @@ export const dataSourceOptions: DataSourceOptions = {
     username: db_user,
     password: db_password,
     database: db_database,
-    entities: ['dist/**/*.entity.js'],
-    migrations: ['dist/db/migrations/*.js'],
+    entities: ['dist/**/*.entity{.ts,.js}'],
+    migrations: ['dist/db/migrations/*{.ts,.js}'],
     synchronize: env !== 'production',
     logging: env !== 'production',
     namingStrategy: new SnakeNamingStrategy()
