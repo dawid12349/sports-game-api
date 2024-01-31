@@ -19,7 +19,7 @@ services:
       - db
 
   db:
-    image: postgres
+    image: postgres:15.3
     restart: always
     env_file: .env
     environment:
@@ -32,12 +32,6 @@ services:
       - pgdata:/var/lib/postgresql/data
     networks:
       - backend
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - '8080:8080'
 
 networks:
   backend:

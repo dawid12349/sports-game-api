@@ -49,6 +49,15 @@ In order to run database migrations run:
    npm run migration:run
    ```
 
+## Running unit tests
+
+In order to run api's unit tests run:
+
+   ```bash
+   npm run test
+   ```
+
+
 ## Stopping the Containers
 
 To stop the Docker containers, press `Ctrl + C` in the terminal where `docker-compose up` is running.
