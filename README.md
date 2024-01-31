@@ -27,10 +27,10 @@ Make sure you have Docker and Docker Compose installed on your machine. If not, 
       POSTGRES_DB=postgres #database name
    ```
 
-3. **Build the Docker images:**
+3. **Install dependencies:**
 
    ```bash
-   docker-compose -f compose.yaml build
+   npm install
    ```
 
 4. **Start the Docker containers:**

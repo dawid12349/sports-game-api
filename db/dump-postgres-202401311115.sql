@@ -321,60 +321,18 @@ ALTER TABLE ONLY public.player ALTER COLUMN id SET DEFAULT nextval('public.playe
 ALTER TABLE ONLY public.team ALTER COLUMN id SET DEFAULT nextval('public.team_id_seq'::regclass);
 
 
---
--- TOC entry 3394 (class 0 OID 16389)
--- Dependencies: 215
--- Data for Name: match; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
 INSERT INTO public.match VALUES (1, 'Stadium A', '2024-02-01', '15:00:00');
 INSERT INTO public.match VALUES (2, 'Stadium B', '2024-02-02', '18:30:00');
 
-
 --
--- TOC entry 3400 (class 0 OID 16416)
--- Dependencies: 221
--- Data for Name: match_players_player; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.match_players_player VALUES (1, 1);
-INSERT INTO public.match_players_player VALUES (1, 2);
-INSERT INTO public.match_players_player VALUES (1, 3);
-INSERT INTO public.match_players_player VALUES (1, 4);
-INSERT INTO public.match_players_player VALUES (1, 5);
-INSERT INTO public.match_players_player VALUES (1, 6);
-INSERT INTO public.match_players_player VALUES (1, 7);
-INSERT INTO public.match_players_player VALUES (1, 8);
-INSERT INTO public.match_players_player VALUES (1, 9);
-INSERT INTO public.match_players_player VALUES (1, 10);
-INSERT INTO public.match_players_player VALUES (1, 20);
-INSERT INTO public.match_players_player VALUES (1, 21);
-INSERT INTO public.match_players_player VALUES (1, 22);
-INSERT INTO public.match_players_player VALUES (1, 23);
-INSERT INTO public.match_players_player VALUES (1, 24);
-INSERT INTO public.match_players_player VALUES (1, 25);
-
-
---
--- TOC entry 3399 (class 0 OID 16409)
--- Dependencies: 220
--- Data for Name: match_teams_team; Type: TABLE DATA; Schema: public; Owner: postgres
+-- TOC entry 3396 (class 0 OID 16396)
+-- Dependencies: 217
+-- Data for Name: team; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.match_teams_team VALUES (1, 1);
-INSERT INTO public.match_teams_team VALUES (1, 2);
-INSERT INTO public.match_teams_team VALUES (2, 1);
-INSERT INTO public.match_teams_team VALUES (2, 2);
-
-
---
--- TOC entry 3402 (class 0 OID 16449)
--- Dependencies: 223
--- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.migrations VALUES (1, 1706209588657, 'AddInsertPlayerCheckTrigger1706209588657');
-INSERT INTO public.migrations VALUES (2, 1706549382905, 'AddInsertMatchPlayerRestrictionTrigger1706549382905');
+INSERT INTO public.team VALUES (1, 'A');
+INSERT INTO public.team VALUES (2, 'B');
+INSERT INTO public.team VALUES (3, 'C');
 
 
 --
@@ -413,14 +371,39 @@ INSERT INTO public.player VALUES (43, 'test', 'Surname1', 1, 3);
 
 
 --
--- TOC entry 3396 (class 0 OID 16396)
--- Dependencies: 217
--- Data for Name: team; Type: TABLE DATA; Schema: public; Owner: postgres
+-- TOC entry 3399 (class 0 OID 16409)
+-- Dependencies: 220
+-- Data for Name: match_teams_team; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.team VALUES (1, 'A');
-INSERT INTO public.team VALUES (2, 'B');
-INSERT INTO public.team VALUES (3, 'C');
+INSERT INTO public.match_teams_team VALUES (1, 1);
+INSERT INTO public.match_teams_team VALUES (1, 2);
+INSERT INTO public.match_teams_team VALUES (2, 1);
+INSERT INTO public.match_teams_team VALUES (2, 2);
+
+
+--
+-- TOC entry 3400 (class 0 OID 16416)
+-- Dependencies: 221
+-- Data for Name: match_players_player; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.match_players_player VALUES (1, 1);
+INSERT INTO public.match_players_player VALUES (1, 2);
+INSERT INTO public.match_players_player VALUES (1, 3);
+INSERT INTO public.match_players_player VALUES (1, 4);
+INSERT INTO public.match_players_player VALUES (1, 5);
+INSERT INTO public.match_players_player VALUES (1, 6);
+INSERT INTO public.match_players_player VALUES (1, 7);
+INSERT INTO public.match_players_player VALUES (1, 8);
+INSERT INTO public.match_players_player VALUES (1, 9);
+INSERT INTO public.match_players_player VALUES (1, 10);
+INSERT INTO public.match_players_player VALUES (1, 20);
+INSERT INTO public.match_players_player VALUES (1, 21);
+INSERT INTO public.match_players_player VALUES (1, 22);
+INSERT INTO public.match_players_player VALUES (1, 23);
+INSERT INTO public.match_players_player VALUES (1, 24);
+INSERT INTO public.match_players_player VALUES (1, 25);
 
 
 --
