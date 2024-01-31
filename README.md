@@ -30,7 +30,7 @@ Make sure you have Docker and Docker Compose installed on your machine. If not, 
 3. **Build the Docker images:**
 
    ```bash
-   docker-compose-f compose.yaml build
+   docker-compose -f compose.yaml build
    ```
 
 4. **Start the Docker containers:**
@@ -43,7 +43,13 @@ Make sure you have Docker and Docker Compose installed on your machine. If not, 
 
 ## Running database migrations 
 
-In order to run database migrations run:
+Change .env file config of POSTGRES_HOST variables to:
+
+   ```bash
+   POSTGRES_HOST=localhost
+   ```
+
+In order to run database migrations run fallowing command in your terminal from root directory:
 
    ```bash
    npm run migration:run

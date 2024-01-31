@@ -5,7 +5,7 @@
 -- Dumped from database version 15.3 (Debian 15.3-1.pgdg120+1)
 -- Dumped by pg_dump version 15.3
 
--- Started on 2024-01-31 01:33:24
+-- Started on 2024-01-31 11:15:06
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -327,10 +327,8 @@ ALTER TABLE ONLY public.team ALTER COLUMN id SET DEFAULT nextval('public.team_id
 -- Data for Name: match; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.match (id, location, start_date, start_time) FROM stdin;
-1	Stadium A	2024-02-01	15:00:00
-2	Stadium B	2024-02-02	18:30:00
-\.
+INSERT INTO public.match VALUES (1, 'Stadium A', '2024-02-01', '15:00:00');
+INSERT INTO public.match VALUES (2, 'Stadium B', '2024-02-02', '18:30:00');
 
 
 --
@@ -339,24 +337,22 @@ COPY public.match (id, location, start_date, start_time) FROM stdin;
 -- Data for Name: match_players_player; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.match_players_player (match_id, player_id) FROM stdin;
-1	1
-1	2
-1	3
-1	4
-1	5
-1	6
-1	7
-1	8
-1	9
-1	10
-1	20
-1	21
-1	22
-1	23
-1	24
-1	25
-\.
+INSERT INTO public.match_players_player VALUES (1, 1);
+INSERT INTO public.match_players_player VALUES (1, 2);
+INSERT INTO public.match_players_player VALUES (1, 3);
+INSERT INTO public.match_players_player VALUES (1, 4);
+INSERT INTO public.match_players_player VALUES (1, 5);
+INSERT INTO public.match_players_player VALUES (1, 6);
+INSERT INTO public.match_players_player VALUES (1, 7);
+INSERT INTO public.match_players_player VALUES (1, 8);
+INSERT INTO public.match_players_player VALUES (1, 9);
+INSERT INTO public.match_players_player VALUES (1, 10);
+INSERT INTO public.match_players_player VALUES (1, 20);
+INSERT INTO public.match_players_player VALUES (1, 21);
+INSERT INTO public.match_players_player VALUES (1, 22);
+INSERT INTO public.match_players_player VALUES (1, 23);
+INSERT INTO public.match_players_player VALUES (1, 24);
+INSERT INTO public.match_players_player VALUES (1, 25);
 
 
 --
@@ -365,12 +361,10 @@ COPY public.match_players_player (match_id, player_id) FROM stdin;
 -- Data for Name: match_teams_team; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.match_teams_team (match_id, team_id) FROM stdin;
-1	1
-1	2
-2	1
-2	2
-\.
+INSERT INTO public.match_teams_team VALUES (1, 1);
+INSERT INTO public.match_teams_team VALUES (1, 2);
+INSERT INTO public.match_teams_team VALUES (2, 1);
+INSERT INTO public.match_teams_team VALUES (2, 2);
 
 
 --
@@ -379,10 +373,8 @@ COPY public.match_teams_team (match_id, team_id) FROM stdin;
 -- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.migrations (id, "timestamp", name) FROM stdin;
-1	1706209588657	AddInsertPlayerCheckTrigger1706209588657
-2	1706549382905	AddInsertMatchPlayerRestrictionTrigger1706549382905
-\.
+INSERT INTO public.migrations VALUES (1, 1706209588657, 'AddInsertPlayerCheckTrigger1706209588657');
+INSERT INTO public.migrations VALUES (2, 1706549382905, 'AddInsertMatchPlayerRestrictionTrigger1706549382905');
 
 
 --
@@ -391,35 +383,33 @@ COPY public.migrations (id, "timestamp", name) FROM stdin;
 -- Data for Name: player; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.player (id, name, surname, number, team_id) FROM stdin;
-1	Player1_Team1	Surname1	1	1
-2	Player2_Team1	Surname2	2	1
-3	Player3_Team1	Surname3	3	1
-4	Player4_Team1	Surname4	4	1
-5	Player5_Team1	Surname5	5	1
-6	Player6_Team1	Surname6	6	1
-7	Player7_Team1	Surname7	7	1
-8	Player8_Team1	Surname8	8	1
-9	Player9_Team1	Surname9	9	1
-10	Player10_Team1	Surname10	10	1
-11	Player11_Team1	Surname11	11	1
-12	Player12_Team1	Surname12	12	1
-13	Player13_Team1	Surname13	13	1
-14	Player1_Team2	Surname1	1	2
-15	Player2_Team2	Surname2	2	2
-16	Player3_Team2	Surname3	3	2
-17	Player4_Team2	Surname4	4	2
-18	Player5_Team2	Surname5	5	2
-19	Player6_Team2	Surname6	6	2
-20	Player7_Team2	Surname7	7	2
-21	Player8_Team2	Surname8	8	2
-22	Player9_Team2	Surname9	9	2
-23	Player10_Team2	Surname10	10	2
-24	Player11_Team2	Surname11	11	2
-25	Player12_Team2	Surname12	12	2
-26	Player13_Team2	Surname13	13	2
-43	test	Surname1	1	3
-\.
+INSERT INTO public.player VALUES (1, 'Player1_Team1', 'Surname1', 1, 1);
+INSERT INTO public.player VALUES (2, 'Player2_Team1', 'Surname2', 2, 1);
+INSERT INTO public.player VALUES (3, 'Player3_Team1', 'Surname3', 3, 1);
+INSERT INTO public.player VALUES (4, 'Player4_Team1', 'Surname4', 4, 1);
+INSERT INTO public.player VALUES (5, 'Player5_Team1', 'Surname5', 5, 1);
+INSERT INTO public.player VALUES (6, 'Player6_Team1', 'Surname6', 6, 1);
+INSERT INTO public.player VALUES (7, 'Player7_Team1', 'Surname7', 7, 1);
+INSERT INTO public.player VALUES (8, 'Player8_Team1', 'Surname8', 8, 1);
+INSERT INTO public.player VALUES (9, 'Player9_Team1', 'Surname9', 9, 1);
+INSERT INTO public.player VALUES (10, 'Player10_Team1', 'Surname10', 10, 1);
+INSERT INTO public.player VALUES (11, 'Player11_Team1', 'Surname11', 11, 1);
+INSERT INTO public.player VALUES (12, 'Player12_Team1', 'Surname12', 12, 1);
+INSERT INTO public.player VALUES (13, 'Player13_Team1', 'Surname13', 13, 1);
+INSERT INTO public.player VALUES (14, 'Player1_Team2', 'Surname1', 1, 2);
+INSERT INTO public.player VALUES (15, 'Player2_Team2', 'Surname2', 2, 2);
+INSERT INTO public.player VALUES (16, 'Player3_Team2', 'Surname3', 3, 2);
+INSERT INTO public.player VALUES (17, 'Player4_Team2', 'Surname4', 4, 2);
+INSERT INTO public.player VALUES (18, 'Player5_Team2', 'Surname5', 5, 2);
+INSERT INTO public.player VALUES (19, 'Player6_Team2', 'Surname6', 6, 2);
+INSERT INTO public.player VALUES (20, 'Player7_Team2', 'Surname7', 7, 2);
+INSERT INTO public.player VALUES (21, 'Player8_Team2', 'Surname8', 8, 2);
+INSERT INTO public.player VALUES (22, 'Player9_Team2', 'Surname9', 9, 2);
+INSERT INTO public.player VALUES (23, 'Player10_Team2', 'Surname10', 10, 2);
+INSERT INTO public.player VALUES (24, 'Player11_Team2', 'Surname11', 11, 2);
+INSERT INTO public.player VALUES (25, 'Player12_Team2', 'Surname12', 12, 2);
+INSERT INTO public.player VALUES (26, 'Player13_Team2', 'Surname13', 13, 2);
+INSERT INTO public.player VALUES (43, 'test', 'Surname1', 1, 3);
 
 
 --
@@ -428,11 +418,9 @@ COPY public.player (id, name, surname, number, team_id) FROM stdin;
 -- Data for Name: team; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.team (id, name) FROM stdin;
-1	A
-2	B
-3	C
-\.
+INSERT INTO public.team VALUES (1, 'A');
+INSERT INTO public.team VALUES (2, 'B');
+INSERT INTO public.team VALUES (3, 'C');
 
 
 --
@@ -618,7 +606,7 @@ ALTER TABLE ONLY public.match_players_player
     ADD CONSTRAINT "FK_ed49e70ba9b261863c91be8ed5f" FOREIGN KEY (player_id) REFERENCES public.player(id);
 
 
--- Completed on 2024-01-31 01:33:25
+-- Completed on 2024-01-31 11:15:07
 
 --
 -- PostgreSQL database dump complete
